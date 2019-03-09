@@ -1,0 +1,171 @@
+.header__mob
+	height 100%
+	width 100%
+	opacity 0
+	z-index -1
+	display none
+	&-bg
+		opacity 0
+		z-index -1
+		display block
+.head
+	position fixed
+	top 0
+	width 100%
+	z-index 110
+	transition background-color .3s
+	&-active
+		background-color rgba(21,21,21,.8)
+	.header
+		padding 36px 0
+		position relative
+		transition padding .3s
+		display flex
+		color $white
+		align-items center
+		justify-content space-between
+		opacity 0
+		transform translateX(-20px)
+		&-active
+			padding 17px 0
+			.header__logo-desc
+				& p
+					color $white
+			.header__menu-item
+				color $white
+			.header__button
+				color $white
+			.header__cart
+				& svg path
+					fill $white
+		&__button
+			color $text
+			font-size 20px
+			display none
+			cursor pointer
+			font-size 32px
+			& i
+				transition .3s
+			&:hover i
+				color $red
+		&__logo
+			display flex
+			align-items center
+			&-desc
+				margin-left 13px
+				& p
+					transition .3s
+					color $text
+					font-family $Book
+					font-size 0.75rem
+					line-height 14px
+		&__cart
+			position relative
+			cursor pointer
+			& svg
+				max-width 37px
+				max-height 37px
+				height 37px
+				width 37px
+				& path
+					transition .3s
+			&:hover svg path
+				fill $red
+			&-number
+				position absolute
+				right -10px
+				display flex
+				align-items center
+				justify-content center
+				top -5px
+				border-radius 50%
+				background-color $red
+				width 20px
+				height 20px
+				color $white
+				font-family $Regular
+				font-size 0.75rem
+				line-height 28px
+		&__menu
+			display flex
+			align-items center
+			&-item
+				font-size 1rem
+				font-family $Book
+				line-height 28px
+				color $text
+				margin 0 20px
+				display inline-block
+				transition .3s
+				&:hover
+					color $red
+				&:last-child
+					margin-right 20px
+@media(max-width: 1140px)
+	.head
+		.header
+			&__menu
+				&-item
+					font-size 0.825rem
+@media(max-width: 991px)
+	.menu-active
+		.header__mob-bg
+			display block
+		.header__mob
+			display block
+			#close
+				cursor pointer
+				z-index 10
+				position absolute
+				top 5px
+				right 5px
+				& svg
+					max-width 38px
+					max-height 38px
+				& svg polygon
+					fill $white
+					transition .3s
+					font-size 32px
+				&:hover svg polygon
+					fill $black
+	.head
+		.header
+			position relative
+			&__logo
+				display none
+			&__menu
+				display none
+			&__button
+				display block
+	.header__mob
+		position fixed
+		&-bg
+			background-color rgba(0, 0, 0, 0.6)
+			position fixed
+			width 100%
+			height 100vh
+			left 0
+			top 0
+		&-menu
+			background-color $red
+			display flex
+			flex-wrap wrap
+			flex-basis 100%
+			opacity 0
+			z-index -1
+			height 100vh
+			&-item
+				flex-basis 100%
+				display flex
+				justify-content center
+				align-items center
+				& a
+					padding 18px 0
+					font-family $Regular
+					text-align center
+					font-size 1.125rem
+					line-height 28px
+					color $white
+					transition color .3s
+					&:hover
+						color $text

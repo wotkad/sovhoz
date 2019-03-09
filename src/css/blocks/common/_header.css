@@ -1,0 +1,275 @@
+.header__mob {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  display: none;
+}
+.header__mob-bg {
+  opacity: 0;
+  z-index: -1;
+  display: block;
+}
+.head {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 110;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.head-active {
+  background-color: rgba(21,21,21,0.8);
+}
+.head .header {
+  padding: 36px 0;
+  position: relative;
+  -webkit-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: $white;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+.head .header-active {
+  padding: 17px 0;
+}
+.head .header-active .header__logo-desc p {
+  color: $white;
+}
+.head .header-active .header__menu-item {
+  color: $white;
+}
+.head .header-active .header__button {
+  color: $white;
+}
+.head .header-active .header__cart svg path {
+  fill: $white;
+}
+.head .header__button {
+  color: $text;
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+  font-size: 32px;
+}
+.head .header__button i {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.head .header__button:hover i {
+  color: $red;
+}
+.head .header__logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.head .header__logo-desc {
+  margin-left: 13px;
+}
+.head .header__logo-desc p {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: $text;
+  font-family: $Book;
+  font-size: 0.75rem;
+  line-height: 14px;
+}
+.head .header__cart {
+  position: relative;
+  cursor: pointer;
+}
+.head .header__cart svg {
+  max-width: 37px;
+  max-height: 37px;
+  height: 37px;
+  width: 37px;
+}
+.head .header__cart svg path {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.head .header__cart:hover svg path {
+  fill: $red;
+}
+.head .header__cart-number {
+  position: absolute;
+  right: -10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: -5px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: $red;
+  width: 20px;
+  height: 20px;
+  color: $white;
+  font-family: $Regular;
+  font-size: 0.75rem;
+  line-height: 28px;
+}
+.head .header__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.head .header__menu-item {
+  font-size: 1rem;
+  font-family: $Book;
+  line-height: 28px;
+  color: $text;
+  margin: 0 20px;
+  display: inline-block;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.head .header__menu-item:hover {
+  color: $red;
+}
+.head .header__menu-item:last-child {
+  margin-right: 20px;
+}
+@media (max-width: 1140px) {
+  .head .header__menu-item {
+    font-size: 0.825rem;
+  }
+}
+@media (max-width: 991px) {
+  .menu-active .header__mob-bg {
+    display: block;
+  }
+  .menu-active .header__mob {
+    display: block;
+  }
+  .menu-active .header__mob #close {
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  .menu-active .header__mob #close svg {
+    max-width: 38px;
+    max-height: 38px;
+  }
+  .menu-active .header__mob #close svg polygon {
+    fill: $white;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 32px;
+  }
+  .menu-active .header__mob #close:hover svg polygon {
+    fill: $black;
+  }
+  .head .header {
+    position: relative;
+  }
+  .head .header__logo {
+    display: none;
+  }
+  .head .header__menu {
+    display: none;
+  }
+  .head .header__button {
+    display: block;
+  }
+  .header__mob {
+    position: fixed;
+  }
+  .header__mob-bg {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+  .header__mob-menu {
+    background-color: $red;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    opacity: 0;
+    z-index: -1;
+    height: 100vh;
+  }
+  .header__mob-menu-item {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__mob-menu-item a {
+    padding: 18px 0;
+    font-family: $Regular;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 28px;
+    color: $white;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+  .header__mob-menu-item a:hover {
+    color: $text;
+  }
+}

@@ -1,0 +1,55 @@
+.cart-bg
+.cart
+	.cart__close
+		<svg enable-background="new 0 0 31.112 31.112" version="1.1" viewBox="0 0 31.112 31.112" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+		<polygon fill="#000" points="31.112 1.414 29.698 0 15.556 14.142 1.414 0 0 1.414 14.142 15.556 0 29.698 1.414 31.112 15.556 16.97 29.698 31.112 31.112 29.698 16.97 15.556"/>
+		</svg>
+	.cart__title Ваш заказ
+	.cart__items
+		.cart__item
+			.cart__item-image
+				img(src="/images/product1.png")
+			.cart__item-title Молоко цельное, 0,5 л
+			.cart__item-counts
+				.cart__item-counts-minus
+					i.fa.fa-minus
+				.cart__item-counts-number 1
+				.cart__item-counts-plus
+					i.fa.fa-plus
+			.cart__item-price 150 ₽
+			.cart__item-close
+				<svg enable-background="new 0 0 31.112 31.112" version="1.1" viewBox="0 0 31.112 31.112" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+				<polygon fill="#000" points="31.112 1.414 29.698 0 15.556 14.142 1.414 0 0 1.414 14.142 15.556 0 29.698 1.414 31.112 15.556 16.97 29.698 31.112 31.112 29.698 16.97 15.556"/>
+				</svg>
+		.cart__item
+			.cart__item-image
+				img(src="/images/cart2.png")
+			.cart__item-title Сыр Гауда, 1 кг
+			.cart__item-counts
+				.cart__item-counts-minus
+					i.fa.fa-minus
+				.cart__item-counts-number 1
+				.cart__item-counts-plus
+					i.fa.fa-plus
+			.cart__item-price 350 ₽
+			.cart__item-close
+				<svg enable-background="new 0 0 31.112 31.112" version="1.1" viewBox="0 0 31.112 31.112" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+				<polygon fill="#000" points="31.112 1.414 29.698 0 15.556 14.142 1.414 0 0 1.414 14.142 15.556 0 29.698 1.414 31.112 15.556 16.97 29.698 31.112 31.112 29.698 16.97 15.556"/>
+				</svg>
+	.cart__count
+		span Итого:
+		span 500 ₽
+	.cart__ordering
+		.cart__ordering-title Оформление заказа
+		.cart__ordering-desc Укажите контактную информацию и наш оператор свяжется с вами в течение 10 минут
+		form(action="#").cart__ordering-form
+			.cart__ordering-form-input
+				input(type="text" placeholder="Введите ваше имя" required="required")
+			.cart__ordering-form-input
+				input(type="tel" placeholder="Введите ваш телефон" required="required")
+			.cart__ordering-form-button
+				button(type="submit") Оформить заказ
+			.cart__ordering-form-link
+				a(href="#products").cart__ordering-form-link-item
+					span Продолжить покупки
+					i.fa.fa-long-arrow-right

@@ -1,0 +1,139 @@
+.footer
+	&__blocks
+		display flex
+		align-items flex-start
+		justify-content space-between
+		.footer__block
+			padding 44px 0
+			flex-basis 24%
+			display flex
+			&:nth-child(1)
+				display flex
+				flex-basis 17%
+				align-items center
+			&:nth-child(2)
+				flex-basis 20%
+			&:nth-child(3)
+				flex-basis 20%
+			&:nth-child(4)
+				flex-basis 23.75%
+				.footer__block-content a
+					font-size 1.125rem
+					font-family $Bold
+					color #60605d
+					line-height 28px
+					transition .3s
+					&:hover
+						color $red
+			&:nth-child(5)
+				flex-basis 5%
+			&-desc
+				margin-left 13px
+				& p
+					transition .3s
+					color $text
+					font-family $Book
+					font-size 0.75rem
+					line-height 14px
+			&-img
+				&-icon
+					margin-right 16px
+					border-radius 50%
+					display flex
+					align-items center
+					justify-content center
+					min-width 31px
+					min-height 31px
+					max-width 31px
+					max-height 31px
+					background-color $white
+					box-shadow 10px 0 30px #eaeaea
+					& svg
+						width 15px
+						height 15px
+			&-social
+				display flex
+				align-items center
+				justify-content center
+				background-color #96d3a3
+				font-size 16px
+				cursor pointer
+				transition .3s
+				width 32px
+				height 32px
+				border-radius 50%
+				border 1px solid transparent
+				&:nth-child(2)
+					margin-left 15px
+				& i
+					color $white
+					transition .3s
+				&:hover
+					background-color $white
+					border-color #96d3a3
+				&:hover i
+					color #96d3a3
+			&-content
+				&-title
+					font-family sans-serif
+					color #96d3a3
+					font-size 0.825rem
+					line-height 24px
+					margin-bottom 5px
+				&-text
+					color $text
+					font-size 0.825rem
+					line-height 24px
+					font-family sans-serif
+				& a
+					transition .3s
+					&:hover
+						color $red
+	&__separator
+		height 1px
+		width 100%
+		background-color #e6e6e6
+	&__fullblock
+		padding 30px 0
+		align-items center
+		display flex
+		justify-content space-between
+		&-item
+			& p
+				font-family $Book
+				font-size 0.825rem
+				line-height 28px
+				color #60605d
+			&:nth-child(2)
+				display flex
+				align-items center
+				justify-content space-around
+				& p
+					margin-right 25px
+			&-img
+				& img
+					margin-bottom -11px
+@media(max-width:768px)
+	.footer
+		background-color #f5f6f8
+		&__blocks
+			.footer__block
+				padding 0 0 21px 0
+				&:nth-child(1)
+					flex-basis 50%
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					display none
+		&__separator
+			display none
+		&__fullblock
+			padding 0 0 21px 0
+			flex-wrap wrap
+			&-item
+				&:nth-child(1)
+					border-bottom 1px solid #e1e1e1
+					padding-bottom 21px
+					flex-basis 100%
+				&:nth-child(2)
+					padding-top 21px

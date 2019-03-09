@@ -1,0 +1,64 @@
+.popup1-bg
+	position fixed
+	width 100%
+	height 100%
+	z-index -1
+	opacity 0
+	top 0
+	left 0
+	background-color rgba(0,0,0,.5)
+	&-active
+		z-index 9998
+		opacity 1
+.popup1
+	position fixed
+	top calc(50% - 200px)
+	left calc(50% - 225px)
+	z-index -1
+	opacity 0
+	background-color $white
+	border-radius 7px
+	padding 40px 60px
+	width 450px
+	&-active
+		z-index 9999
+		opacity 1
+	&__close
+		max-width 22px
+		max-height 22px
+		height 22px
+		width 22px
+		cursor pointer
+		position absolute
+		right 21px
+		top 21px
+		& svg polygon
+			transition .3s
+		&:hover svg polygon
+			fill $red
+	&__title
+		font-family $Bold
+		font-size 2rem
+		line-height 36px
+		color $text
+		width 90%
+		margin-bottom 20px
+	&__item
+		border-bottom 1px solid #f2f2f2
+		padding 15px 0
+		font-family $Book
+		font-size 1rem
+		line-height 16px
+		color $text
+	&__desc
+		font-family $Book
+		font-size 1rem
+		line-height 20px
+		color $text
+		margin-top 20px
+@media(max-width: 480px)
+	.popup1
+		padding 20px 30px
+		width calc(100% - 30px)
+		left 15px
+		right 15px

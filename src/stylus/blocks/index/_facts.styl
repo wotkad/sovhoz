@@ -1,0 +1,183 @@
+.facts
+	background url(/images/facts-bg.png) 50% 50% no-repeat #fff
+	background-size cover
+	padding 100px 0
+	position relative
+	.leaves3
+		position absolute
+		left 0
+		bottom -150px
+		z-index 1
+	.leaves4
+		position absolute
+		right 0
+		top -150px
+		z-index 1
+	&__title
+		margin-bottom 41px
+		font-family $Heavy
+		font-size 2.5rem
+		line-height 70px
+		text-align center
+		color $text
+	&__buttons
+		display flex
+		justify-content center
+		&-button
+			padding 13px 26px
+			transition .3s
+			border-radius 27px
+			background-color #f3efef
+			display flex
+			cursor pointer
+			align-items center
+			&:hover
+				background-color #ff7999
+			&:hover span
+				color $white
+			& svg path
+				transition .3s
+			&:hover svg path
+				fill $white
+			&:nth-child(1)
+				margin-right 20px
+			& svg
+				max-height 29px
+				max-width 29px
+				height 29px
+				width 29px
+			& span
+				margin-left 20px
+				font-family $Regular
+				font-size 1rem
+				line-height 24px
+				transition .3s
+				color #60605d
+			&-active
+				background-color #ff7999
+				& svg path
+					fill $white
+				& span
+					color $white
+	&__blocks
+		display flex
+		justify-content space-between
+		min-height 583px
+		.facts__block
+			flex-basis 32%
+			align-items center
+			display flex
+			flex-wrap wrap
+			&-button
+				border-radius 35px
+				padding 17px 27px
+				width 85%
+				margin -50px auto 0 auto
+				text-align center
+				cursor pointer
+				font-family $Bold
+				color $white
+				font-size 1.125rem
+				background #e9446b
+				margin-bottom 20px
+				line-height 30px
+				box-shadow 0 10px 25px #e9446b
+				transition .3s
+				&:hover
+					background #e91c4c
+			&:nth-child(1)
+				.facts__block-container
+					text-align right
+					justify-content flex-end
+					&:nth-child(1)
+						margin-top 100px
+					&-content
+						margin-right 20px
+			&:nth-child(3)
+				.facts__block-container
+					text-align left
+					&:nth-child(1)
+						margin-top 100px
+					&-content
+						margin-left 20px
+			&-container
+				display flex
+				align-items flex-start
+				flex-basis 100%
+				&-content
+					flex-basis 70%
+					&-title
+						font-family $Bold
+						font-size 1.25rem
+						line-height 26px
+						color $text
+						margin-bottom 28px
+					&-text
+						font-family $Light
+						font-size 1rem
+						line-height 26px
+						color #60605d
+@media(max-width: 991px)
+	.facts
+		padding 40px 0
+		.leaves1
+			display none
+		.leaves2
+			display none
+		&__title
+			margin-bottom 30px
+@media(max-width: 850px)
+	.facts
+		.leaves3
+			display none
+		.leaves4
+			display none
+		&__buttons
+			margin-bottom 30px
+		&__blocks
+			flex-wrap wrap
+			.facts__block
+				flex-basis 100%
+				&-button
+					margin-top 0
+				&-img
+					display none
+				&:nth-child(1)
+					.facts__block-container
+						text-align center
+						justify-content center
+						&:nth-child(1)
+							margin-top 0
+						&-content
+							margin-right 0
+							order 2
+						&-img
+							order 1
+							flex-basis 100%
+				&:nth-child(2)
+					order 3
+				&:nth-child(3)
+					margin-bottom 30px
+					.facts__block-container
+						justify-content center
+						text-align center
+						margin-bottom 0
+						&:nth-child(1)
+							margin-top 0
+							margin-bottom 30px
+						&-content
+							margin-left 0
+							order 2
+						&-img
+							order 1
+							flex-basis 100%
+				&-container
+					margin-bottom 30px
+					flex-wrap wrap
+					width 100%
+					display flex
+					align-items flex-start
+					&-content
+						flex-basis 100%
+						&-title
+							margin-bottom 16px

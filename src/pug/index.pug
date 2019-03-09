@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title ЗАО Совхоз им.Ленина
+		link(rel="stylesheet", href="/css/libs.min.css")
+		link(rel="stylesheet", href="/css/style.css")
+		link(rel="shortcut icon" type="image/png" href="/images/favicon.ico")
+	body
+		.render
+		section
+			include ./blocks/common/header.pug
+		section#home
+			include ./blocks/index/home.pug
+		section#products
+			include ./blocks/index/products.pug
+		section#about
+			include ./blocks/index/about.pug
+		section#delivery
+			include ./blocks/index/delivery.pug
+		section#facts
+			include ./blocks/index/facts.pug
+		section#wholesale
+			include ./blocks/index/wholesale.pug
+		section#contacts
+			include ./blocks/index/contacts.pug
+		section
+			include ./blocks/common/footer.pug
+		section
+			include ./blocks/common/cart.pug
+			include ./blocks/common/popup1.pug
+			include ./blocks/common/popup2.pug
+			include ./blocks/common/popup3.pug
+		script(src="/js/libs.min.js")
+		script(src="/js/main.js")

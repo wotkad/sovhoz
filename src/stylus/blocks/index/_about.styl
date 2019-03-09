@@ -1,0 +1,275 @@
+.about-leaf
+	position absolute
+	left 0
+	bottom 0
+	z-index 6
+.berry3
+	position absolute
+	right 0
+	bottom 100px
+	z-index 6
+.about
+	padding 0 0 100px 0
+	position relative
+	z-index 5
+	overflow hidden
+	&-bg-green
+		background #e7f2ec
+		position absolute
+		width 895px
+		left calc(50% - 447.5px)
+		top -500px
+		height 895px
+		border-radius 50%
+		transform scale(1)
+		transition .3s
+		&-active
+			transition 1s ease-in-out
+			transform scale(10)
+	&-bg-pink
+		background #f9ebeb
+		position absolute
+		width 895px
+		left calc(50% - 447.5px)
+		top -500px
+		height 895px
+		border-radius 50%
+		transform scale(1)
+		transition .3s
+		&-active
+			transition 1s ease-in-out
+			transform scale(10)
+	&-bg-blue
+		background #e2eaf2
+		position absolute
+		width 895px
+		left calc(50% - 447.5px)
+		top -500px
+		height 895px
+		border-radius 50%
+		transform scale(1)
+		transition .3s
+		&-active
+			transition 1s ease-in-out
+			transform scale(10)
+	.g-wrapper
+		overflow hidden
+	&__items
+		width 100%
+		&__header
+			border-radius 50%
+			background-color $white
+			width 512px
+			height 512px
+			display flex
+			margin -300px auto 0
+			align-items center
+			justify-content center
+			z-index 8
+			position relative
+			.rotator
+				position absolute
+				z-index 4
+				border-radius 50%
+				width 512px
+				transition .3s
+				transform rotate(36deg)
+				height 512px
+				margin 0 auto
+				&:after
+					content ''
+					position absolute
+					left calc(50% - 10px)
+					bottom 10px
+					border 10px solid transparent
+					border-top 15px solid #96d3a3
+			&-title
+				margin-top 200px
+				font-family $Bold
+				width 60%
+				font-size 1.5rem
+				line-height 32px
+				text-align center
+				color $text
+		&__nav
+			border-radius 50%
+			background-color #eef5f3
+			width 895px
+			height 895px
+			margin -710px auto 0
+			z-index 7
+			position relative
+			padding 40px
+			&-item
+				border-radius 50%
+				border 1px dashed #c3c5c4
+				width 105px
+				position absolute
+				height 105px
+				background-color transparent
+				transition .3s
+				display flex
+				align-items center
+				justify-content center
+				cursor pointer
+				& svg
+					max-width 40px
+					max-height 40px
+					height 40px
+					width 40px
+				&-active
+					background-color $white
+					border-color transparent
+				&:hover
+					background-color $white
+					border-color transparent
+				&:nth-child(1)
+					bottom 110px
+					left calc(27% - 52.5px)
+				&:nth-child(2)
+					bottom 40px
+					left calc(50% - 52.5px)
+				&:nth-child(3)
+					bottom 110px
+					left calc(73% - 52.5px)
+	&__container
+		display flex
+		margin-top 67px
+		justify-content space-around
+		&-block
+			z-index 10
+			position relative
+			flex-basis 42%
+			&:nth-child(1)
+				max-height 341.5px
+			&:nth-child(2)
+				.about__container-block-title
+					padding-right 100px
+				.about__container-block-text
+					padding-right 50px
+			& img
+				width 100%
+			&-number
+				font-family $Black
+				font-size 5.625rem
+				color $white
+				margin-bottom 10px
+			&-title
+				font-family $Heavy
+				font-size 1.5rem
+				line-height 32px
+				color $text
+				margin-bottom 29px
+			&-text
+				font-size 1rem
+				line-height 26px
+				font-family $Book
+				color $text
+@media(max-width: 991px)
+	.about-leaf
+		display none
+	.berry3
+		display none
+	.about
+		padding 0 0 40px 0
+		&__container
+			flex-wrap wrap
+			&-block
+				flex-basis 100%
+				& img
+					width 60%
+				&:nth-child(1)
+					text-align center
+				&:nth-child(2)
+					padding 0 30px
+				&-number
+					font-size 2rem
+@media(max-width: 930px)
+	.about
+		&-bg-green,
+		&-bg-pink,
+		&-bg-blue
+			width 600px
+			height 600px
+			top -350px
+			left calc(50% - 300px)
+		&__items
+			&__header
+				width 400px
+				height 400px
+				margin -250px auto 0
+				&-title
+					margin-top 180px
+				.rotator
+					width 400px
+					transform rotate(36deg)
+					height 400px
+			&__nav
+				width 600px
+				height 600px
+				margin -500px auto 0
+				&-item
+					width 50px
+					height 50px
+					& svg
+						max-width 30px
+						max-height 30px
+						height 30px
+						width 30px
+					&:nth-child(1)
+						bottom 70px
+						left calc(27% - 25px)
+					&:nth-child(2)
+						bottom 30px
+						left calc(50% - 25px)
+					&:nth-child(3)
+						bottom 70px
+						left calc(73% - 25px)
+@media(max-width: 640px)
+	.about
+		&-bg-green,
+		&-bg-pink,
+		&-bg-blue
+			width 250px
+			height 250px
+			top -125px
+			left calc(50% - 125px)
+		&__items
+			&__header
+				width 200px
+				height 200px
+				margin -125px auto 0
+				&-title
+					margin-top 90px
+					font-size 0.75rem
+					line-height 16px
+				.rotator
+					width 200px
+					transform rotate(36deg)
+					height 200px
+					&:after
+						bottom 5px
+						left calc(50% - 5px)
+						border 5px solid transparent
+						border-top 10px solid #96d3a3
+			&__nav
+				width 300px
+				height 300px
+				margin -250px auto 0
+				&-item
+					width 25px
+					height 25px
+					& svg
+						max-width 15px
+						max-height 15px
+						height 20px
+						width 20px
+					&:nth-child(1)
+						bottom 35px
+						left calc(27% - 10px)
+					&:nth-child(2)
+						bottom 10px
+						left calc(50% - 10px)
+					&:nth-child(3)
+						bottom 35px
+						left calc(73% - 10px)

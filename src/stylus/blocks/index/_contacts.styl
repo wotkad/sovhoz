@@ -1,0 +1,178 @@
+.contacts
+	background url(/images/contacts-bg.png) 50% 50% no-repeat #fff
+	background-size cover
+	padding 100px 0
+	position relative
+	.footer-leaf1
+		position absolute
+		left 100px
+		bottom 50%
+	.footer-leaf2
+		left 0
+		bottom 30px
+		position absolute
+	&__title
+		font-family $Heavy
+		font-size 2.5rem
+		line-height 70px
+		color $text
+		flex-basis 100%
+	&__blocks
+		display flex
+		justify-content space-between
+		position relative
+		.blueberry
+			position absolute
+			right -70px
+			bottom -120px
+		.contacts__block
+			z-index 1
+			&-map
+				border-radius 7px
+				height 414px
+				overflow hidden
+				box-shadow 10px 0 30px #eaeaea
+			&-header
+				margin-bottom 40px
+				display flex
+				justify-content space-between
+				&-item
+					flex-basis 31%
+					display flex
+					align-items center
+					&:nth-child(1)
+						& a
+							transition .3s
+							&:hover
+								color $red
+					&:nth-child(3)
+						& a
+							font-size 1.125rem
+							font-family $Bold
+							color #60605d
+							line-height 28px
+							transition .3s
+							&:hover
+								color $red
+					&-icon
+						margin-right 16px
+						border-radius 50%
+						display flex
+						align-items center
+						justify-content center
+						min-width 31px
+						min-height 31px
+						max-width 31px
+						max-height 31px
+						background-color $white
+						box-shadow 10px 0 30px #eaeaea
+						& svg
+							width 15px
+					& span
+						font-family sans-serif
+						font-size 0.825rem
+						line-height 24px
+						color $text
+					& a
+						font-family sans-serif
+						font-size 0.825rem
+						line-height 24px
+						color $text
+			&:nth-child(1)
+				flex-basis 60%
+				max-width 60%
+			&:nth-child(2)
+				flex-basis 35%
+				padding 53px 58px 20px 58px
+				background-color $white
+				border-radius 7px
+				box-shadow 10px 0 30px #eaeaea
+			&-title
+				font-family $Heavy
+				font-size 1.875rem
+				line-height 38px
+				color $text
+				margin-bottom 25px
+			&-desc
+				font-family $Book
+				font-size .9rem
+				line-height 26px
+				color $text
+				margin-bottom 30px
+			&-form
+				&-input
+					& input
+						background-color #f5f6f8
+						padding 13.5px 27px
+						border-radius 7px
+						width 100%
+						font-size 1rem
+						line-height 26px
+						line-height 26px
+						border none
+						margin-bottom 15px
+				&-button
+					& button
+						border-radius 35px
+						background #e9446b
+						border none
+						padding 13.5px 27px
+						width 100%
+						cursor pointer
+						font-family $Bold
+						color $white
+						font-size 1.125rem
+						margin-bottom 20px
+						line-height 30px
+						box-shadow 0 10px 25px #e9446b
+						transition .3s
+						&:hover
+							background #e91c4c
+				&-policy
+					& span,
+					& a
+						font-family $Book
+						font-size 0.825rem
+						line-height 20px
+					& span
+						color $text
+					& a
+						color $red
+						margin-left 4px
+						transition .3s
+						border-bottom 1px solid transparent
+						&:hover
+							color $text
+							border-color $red
+@media(max-width: 991px)
+	.contacts
+		background #f5f6f8
+		padding 40px 0
+		.footer-leaf1
+			display none
+		.footer-leaf2
+			display none
+		&__title
+			text-align center
+		&__blocks
+			flex-wrap wrap
+			.blueberry
+				display none
+			.contacts__block
+				&:nth-child(1)
+					flex-basis 100%
+					max-width 100%
+				&:nth-child(2)
+					flex-basis 100%
+					padding 30px 21px
+				&-header
+					flex-wrap wrap
+					justify-content space-between
+					margin-bottom 26px
+					&-item
+						margin 0 auto 12px auto
+						flex-basis 85%
+				&-map
+					margin-bottom 26px
+				&-desc
+					font-size 1rem

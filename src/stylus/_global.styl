@@ -1,0 +1,126 @@
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+	outline: none
+	text-decoration none
+	box-shadow none
+
+a
+	text-decoration none
+	color $black
+
+html,
+body
+	height 100%
+	background-color $white
+
+body
+	overflow-x hidden
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder
+	font-family $Light
+	font-weight 100
+
+textarea::-moz-placeholder,
+input::-moz-placeholder
+	font-family $Light
+	font-weight 100
+
+textarea:-moz-placeholder,
+input:-moz-placeholder
+	font-family $Light
+	font-weight 100
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder
+	font-family $Light
+	font-weight 100
+
+.render
+	height 100%
+	position absolute
+	top 0
+	left 0
+	bottom 0
+	right 0
+	width 100%
+	background-color $white
+
+.g-wrapper
+	max-width 1140px
+	margin 0 auto
+	padding 0 15px
+
+section
+	position relative
+
+.ymap-container
+	position relative
+	overflow hidden
+	cursor pointer
+	background url('/images/contacts-map.jpg') #ffffff no-repeat
+	background-position center center
+	background-size cover
+
+#map-yandex
+	position relative
+	width 100%
+	height 414px
+	cursor pointer
+	background-color transparent
+
+.loader
+	position absolute
+	z-index 15
+	top -100%
+	left 0
+	box-sizing border-box
+	width 100%
+	height 100%
+	overflow hidden
+	color #000000
+	transition opacity .7s ease
+	opacity 0
+	background-color rgba(0,0,0,.55)
+
+.loader:after,
+.loader:before
+	box-sizing border-box
+
+.loader.is-active
+	top 0
+	opacity 1
+
+.loader-default:after
+	position absolute
+	top calc(50% - 24px)
+	left calc(50% - 24px)
+	width 48px
+	height 48px
+	content ''
+	animation rotation 1s linear infinite
+	border solid 8px #ffffff
+	border-left-color transparent
+	border-radius 50%
+
+@keyframes rotation
+	from
+		transform rotate(0)
+	to
+		transform rotate(359deg)
+@keyframes blink
+	from
+		opacity .5
+	to
+		opacity 1
+
+@media (max-width: 991px)
+	html
+		font-size 14px
+
+@media (max-width: 768px)
+	.g-wrapper
+		width 100%
+		padding 0 15px
