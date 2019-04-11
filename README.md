@@ -1,4 +1,4 @@
-# Sovhoz
+# Sovhozlenina-ferma
 
 INSTALLATION
 -
